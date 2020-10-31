@@ -75,7 +75,6 @@ describe('head', function(){
     });
 });              
        
-
 describe('tail', function(){
     it ('it should return null when the array is empty', function(){
         let arr =[];
@@ -196,5 +195,4 @@ describe('merge', function(){
         let arr2 = [];
         assert.deepEqual(functions.merge(arr1,arr2), [2,4,6]);
     });
-
 });
