@@ -7,13 +7,13 @@ describe('sum', function(){
         assert.equal(functions.sum(3, 2), 5);
     });
 
-        it('should return 3 when adding 1.5 and 1.5', function(){
-            assert.equal(functions.sum(1.5, 1.5), 3);
-        });
+    it('should return 3 when adding 1.5 and 1.5', function(){
+        assert.equal(functions.sum(1.5, 1.5), 3);
+    });
 
-        it('should return 1 when adding 4 and -3', function(){
-            assert.equal(functions.sum(4, -3), 1);
-        });
+    it('should return 1 when adding 4 and -3', function(){
+        assert.equal(functions.sum(4, -3), 1);
+    });
 });
 
 describe('product', function(){
@@ -21,59 +21,59 @@ describe('product', function(){
         assert.equal(functions.product(3, 3), 9);
     });
 
-        it('it should return 7.5 when multiplying 2.5 and 3.0', function(){
-            assert.equal(functions.product(2.5, 3.0), 7.5);
-        });
-
-        it('it should return -2 when multiplying 2 and -1', function(){
-            assert.equal(functions.product(2, -1), -2);
-        });
+    it('it should return 7.5 when multiplying 2.5 and 3.0', function(){
+        assert.equal(functions.product(2.5, 3.0), 7.5);
     });
 
+    it('it should return -2 when multiplying 2 and -1', function(){
+        assert.equal(functions.product(2, -1), -2);
+    });
+});
+
 describe('min', function(){
-     it('it should return 2 when numbers are 2 and 2', function(){
-            assert.equal(functions.min(2, 2),2);
-        });
+    it('it should return 2 when numbers are 2 and 2', function(){
+        assert.equal(functions.min(2, 2),2);
+    });
     
-            it('it should return -5 when numbers are -4 and -5', function(){
-                assert.deepEqual(functions.min(-4, -5),-5);
-            });
+    it('it should return -5 when numbers are -4 and -5', function(){
+        assert.deepEqual(functions.min(-4, -5),-5);
+    });
     
-            it('it should return 0.001 when numbers are 0.01 and 0.001', function(){
-                assert.deepEqual(functions.min(0.01, 0.001), 0.001);
-            });
-        });
+     it('it should return 0.001 when numbers are 0.01 and 0.001', function(){
+        assert.deepEqual(functions.min(0.01, 0.001), 0.001);
+    });
+});
 
- describe('max', function(){
-            it('it should return 3 when numbers are 3 and 3', function(){
-                   assert.equal(functions.max(3, 3),3);
-               });
+describe('max', function(){
+    it('it should return 3 when numbers are 3 and 3', function(){
+        assert.equal(functions.max(3, 3),3);
+    });
            
-                   it('it should return -4 when numbers are -4 and -5', function(){
-                       assert.deepEqual(functions.max(-4, -5), -4);
-                   });
+    it('it should return -4 when numbers are -4 and -5', function(){
+        assert.deepEqual(functions.max(-4, -5), -4);
+    });
            
-                   it('it should return 0.01 when numbers are 0.01 and 0.001', function(){
-                       assert.equal(functions.max(0.01, 0.001), 0.01);
-                   });
-               });
+    it('it should return 0.01 when numbers are 0.01 and 0.001', function(){
+        assert.equal(functions.max(0.01, 0.001), 0.01);
+    });
+});
 
-    describe('head', function(){
-            it ('it should return null when the array is empty', function(){
-                    let arr =[];
-                    assert.isNull(functions.head(arr));
-                });
+describe('head', function(){
+    it ('it should return null when the array is empty', function(){
+        let arr =[];
+        assert.isNull(functions.head(arr));
+    });
             
-                it ('it should return [1] when the array is [1,2,3]', function(){
-                    let arr =[1,'2','3'];
-                    assert.equal(functions.head(arr),1);
-                });
+    it ('it should return [1] when the array is [1,2,3]', function(){
+        let arr =[1,'2','3'];
+        assert.equal(functions.head(arr),1);
+    });
             
-                it ('it should return hey when the array is [hello,Hi]', function(){
-                    let arr =['hello','hi'];
-                    assert.equal(functions.head(arr),'hello');
-                });
-            });              
+    it ('it should return hey when the array is [hello,Hi]', function(){
+        let arr =['hello','hi'];
+        assert.equal(functions.head(arr),'hello');
+    });
+});              
        
 
 describe('tail', function(){
@@ -178,29 +178,23 @@ describe('largest', function(){
     });
 });
 
-
-
 describe('merge', function(){
     it('it should return null when both the arrays are empty', function(){
         let arr1 = [];
         let arr2 = [];
         assert.isNull(functions.merge(arr1,arr2));
-
     });
 
     it('it should return [2,3,4,5,6,7] when arrays are [2,4,6] and [3,5,7] ', function(){
         let arr1 = [2,4,6];
         let arr2 = [3,5,7];
         assert.deepEqual(functions.merge(arr1,arr2), [2,3,4,5,6,7]);
-
     });
 
     it('it should return [2,4,6] when merging [2,4,6] and []', function(){
         let arr1 = [2,4,6];
         let arr2 = [];
         assert.deepEqual(functions.merge(arr1,arr2), [2,4,6]);
-
     });
-
 
 });
